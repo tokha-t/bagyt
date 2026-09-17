@@ -1,1 +1,43 @@
-export default function ScoreSlider({value,min,max,step,hint,onChange}:{value:number|null;min:50;max:140;step:1;hint:string;onChange:(v:number|null)=>void}){return <div><div className="split"><strong className="score-input">{value??'Not taken'}</strong><button type="button" className="text-button" onClick={()=>onChange(null)}>Not taken / skip</button></div><input aria-label="UNT score" type="range" min={min} max={max} step={step} value={value??50} aria-valuetext={value===null?'Not taken':`${value} UNT points`} onChange={e=>onChange(+e.target.value)}/><p className="hint" aria-live="polite">{hint}</p></div>;}
+export default function ScoreSlider({
+  value,
+  min,
+  max,
+  step,
+  hint,
+  onChange,
+}: {
+  value: number | null;
+  min: 50;
+  max: 140;
+  step: 1;
+  hint: string;
+  onChange: (v: number | null) => void;
+}) {
+  return (
+    <div>
+      <div className="split">
+        <strong className="score-input">{value ?? "Not taken"}</strong>
+        <button
+          type="button"
+          className="text-button"
+          onClick={() => onChange(null)}
+        >
+          Not taken / skip
+        </button>
+      </div>
+      <input
+        aria-label="UNT score"
+        type="range"
+        min={min}
+        max={max}
+        step={step}
+        value={value ?? 50}
+        aria-valuetext={value === null ? "Not taken" : `${value} UNT points`}
+        onChange={(e) => onChange(+e.target.value)}
+      />
+      <p className="hint" aria-live="polite">
+        {hint}
+      </p>
+    </div>
+  );
+}

@@ -1,2 +1,33 @@
-import {Task} from '@/lib/types';import SourceBadge from './SourceBadge';
-export default function TaskRow({task,completed,overdue,onToggle}:{task:Task;completed:boolean;overdue:boolean;onToggle:(id:string)=>void}){return <article className={`task ${completed?'completed':''}`}><label><input type="checkbox" checked={completed} onChange={()=>onToggle(task.id)}/><span><strong>{task.title}</strong><small>{task.date} {overdue&&!completed?'· Overdue':''}</small></span></label><p>{task.why}</p><SourceBadge provenance={task.provenance}/></article>;}
+import { Task } from "@/lib/types";
+import SourceBadge from "./SourceBadge";
+export default function TaskRow({
+  task,
+  completed,
+  overdue,
+  onToggle,
+}: {
+  task: Task;
+  completed: boolean;
+  overdue: boolean;
+  onToggle: (id: string) => void;
+}) {
+  return (
+    <article className={`task ${completed ? "completed" : ""}`}>
+      <label>
+        <input
+          type="checkbox"
+          checked={completed}
+          onChange={() => onToggle(task.id)}
+        />
+        <span>
+          <strong>{task.title}</strong>
+          <small>
+            {task.date} {overdue && !completed ? "· Overdue" : ""}
+          </small>
+        </span>
+      </label>
+      <p>{task.why}</p>
+      <SourceBadge provenance={task.provenance} />
+    </article>
+  );
+}

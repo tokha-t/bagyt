@@ -1,2 +1,34 @@
-import {Profile} from '@/lib/types';import SourceBadge from './SourceBadge';
-export default function DiagnosticCard({text,missingField,loading}:{text:string;source:'ai'|'template';missingField?:{field:keyof Profile;impact:string};loading:boolean}){return <section className={`panel diagnostic ${loading?'skeleton':''}`} aria-busy={loading}><h2>Your starting point</h2><p>{text}</p><SourceBadge provenance={{status:'expected',basis:'A summary of your self-reported profile.'}}/>{missingField&&<aside><strong>Add {missingField.field}</strong><p>{missingField.impact}</p></aside>}</section>;}
+import { Profile } from "@/lib/types";
+import SourceBadge from "./SourceBadge";
+export default function DiagnosticCard({
+  text,
+  missingField,
+  loading,
+}: {
+  text: string;
+  source: "ai" | "template";
+  missingField?: { field: keyof Profile; impact: string };
+  loading: boolean;
+}) {
+  return (
+    <section
+      className={`panel diagnostic ${loading ? "skeleton" : ""}`}
+      aria-busy={loading}
+    >
+      <h2>Your starting point</h2>
+      <p>{text}</p>
+      <SourceBadge
+        provenance={{
+          status: "expected",
+          basis: "A summary of your self-reported profile.",
+        }}
+      />
+      {missingField && (
+        <aside>
+          <strong>Add {missingField.field}</strong>
+          <p>{missingField.impact}</p>
+        </aside>
+      )}
+    </section>
+  );
+}

@@ -1,2 +1,85 @@
-import {MatchResult,DimensionKey} from '@/lib/types';import {LABELS} from '@/lib/profile';import {money,COMPUTED} from '@/lib/data';import SourceBadge from './SourceBadge';
-export default function CompareStack({results,priorityOrder}:{results:MatchResult[];priorityOrder:DimensionKey[]}){return <><div className="compare-table panel"><table><caption>Compare your selected programs</caption><thead><tr><th scope="col">Your priorities</th>{results.map(r=><th key={r.program.id} scope="col">{r.program.name}<small>{r.program.university}</small></th>)}</tr></thead><tbody>{priorityOrder.map(k=><tr key={k}><th scope="row">{LABELS[k]}</th>{results.map(r=>{const d=r.dimensions.find(d=>d.key===k);return <td key={r.program.id}>{d?.score}/100<p>{d?.reason}</p><SourceBadge provenance={COMPUTED}/></td>;})}</tr>)}<tr><th scope="row">Tuition / year</th>{results.map(r=><td key={r.program.id}>{money(r.program.tuitionPerYear)}<SourceBadge provenance={r.program.tuitionProvenance}/></td>)}</tr></tbody></table></div><div className="compare-mobile">{results.map(r=><details className="panel" key={r.program.id} open><summary>{r.program.name}<small>{r.program.university}</small></summary>{priorityOrder.map(k=>{const d=r.dimensions.find(d=>d.key===k);return <section key={k}><h3>{LABELS[k]} · {d?.score}/100</h3><p>{d?.reason}</p><SourceBadge provenance={COMPUTED}/></section>;})}<p>Tuition / year: {money(r.program.tuitionPerYear)} <SourceBadge provenance={r.program.tuitionProvenance}/></p></details>)}</div></>;}
+import { MatchResult, DimensionKey } from "@/lib/types";
+import { LABELS } from "@/lib/profile";
+import { money, COMPUTED, DEMO } from "@/lib/data";
+import SourceBadge from "./SourceBadge";
+export default function CompareStack({
+  results,
+  priorityOrder,
+}: {
+  results: MatchResult[];
+  priorityOrder: DimensionKey[];
+}) {
+  return (
+    <>
+      <div className="compare-table panel">
+        <table>
+          <caption>Compare your selected programs</caption>
+          <thead>
+            <tr>
+              <th scope="col">Your priorities</th>
+              {results.map((r) => (
+                <th key={r.program.id} scope="col">
+                  {r.program.name}
+                  <small>{r.program.university}</small>
+                  <SourceBadge provenance={DEMO} />
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {priorityOrder.map((k) => (
+              <tr key={k}>
+                <th scope="row">{LABELS[k]}</th>
+                {results.map((r) => {
+                  const d = r.dimensions.find((d) => d.key === k);
+                  return (
+                    <td key={r.program.id}>
+                      {d?.score}/100<p>{d?.reason}</p>
+                      <SourceBadge provenance={COMPUTED} />
+                    </td>
+                  );
+                })}
+              </tr>
+            ))}
+            <tr>
+              <th scope="row">Tuition / year</th>
+              {results.map((r) => (
+                <td key={r.program.id}>
+                  {money(r.program.tuitionPerYear)}
+                  <SourceBadge provenance={r.program.tuitionProvenance} />
+                </td>
+              ))}
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div className="compare-mobile">
+        {results.map((r) => (
+          <details className="panel" key={r.program.id} open>
+            <summary>
+              {r.program.name}
+              <small>{r.program.university}</small>
+              <SourceBadge provenance={DEMO} />
+            </summary>
+            {priorityOrder.map((k) => {
+              const d = r.dimensions.find((d) => d.key === k);
+              return (
+                <section key={k}>
+                  <h3>
+                    {LABELS[k]} · {d?.score}/100
+                  </h3>
+                  <p>{d?.reason}</p>
+                  <SourceBadge provenance={COMPUTED} />
+                </section>
+              );
+            })}
+            <p>
+              Tuition / year: {money(r.program.tuitionPerYear)}{" "}
+              <SourceBadge provenance={r.program.tuitionProvenance} />
+            </p>
+          </details>
+        ))}
+      </div>
+    </>
+  );
+}

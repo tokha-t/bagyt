@@ -1,2 +1,37 @@
-const names=['Start','Profile','Your picture','Matches','Compare','Roadmap','Next action'];
-export default function ProgressRail({stage,completed,onJump}:{stage:1|2|3|4|5|6|7;completed:number[];onJump?:(s:number)=>void}){return <nav aria-label="Your journey" className="progress"><ol>{names.map((n,i)=><li key={n}><button aria-current={stage===i+1?'step':undefined} onClick={()=>onJump?.(i+1)}><span>{completed.includes(i+1)?'✓':i+1}</span><small>{n}</small></button></li>)}</ol></nav>;}
+const names = [
+  "Start",
+  "Profile",
+  "Your picture",
+  "Matches",
+  "Compare",
+  "Roadmap",
+  "Next action",
+];
+export default function ProgressRail({
+  stage,
+  completed,
+  onJump,
+}: {
+  stage: 1 | 2 | 3 | 4 | 5 | 6 | 7;
+  completed: number[];
+  onJump?: (s: number) => void;
+}) {
+  return (
+    <nav aria-label="Your journey" className="progress">
+      <ol>
+        {names.map((n, i) => (
+          <li key={n}>
+            <button
+              aria-label={n}
+              aria-current={stage === i + 1 ? "step" : undefined}
+              onClick={() => onJump?.(i + 1)}
+            >
+              <span>{completed.includes(i + 1) ? "✓" : i + 1}</span>
+              <small>{n}</small>
+            </button>
+          </li>
+        ))}
+      </ol>
+    </nav>
+  );
+}
