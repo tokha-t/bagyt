@@ -1,0 +1,2 @@
+import {DimensionScore,Tier} from '@/lib/types';import {LABELS} from '@/lib/profile';import SourceBadge from './SourceBadge';import {COMPUTED} from '@/lib/data';
+export default function DimensionBar({dimension:d}:{dimension:DimensionScore;tier:Tier}){return <div className="dimension"><div className="split"><strong>{LABELS[d.key]}</strong><span>{d.score}/100</span></div><meter min="0" max="100" value={d.score} aria-label={LABELS[d.key]} /><p>{d.reason}</p><SourceBadge provenance={COMPUTED}/></div>;}
