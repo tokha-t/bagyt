@@ -1,0 +1,24 @@
+{
+  "checkedOn": "2026-09-18",
+  "grantCap": {
+    "value": 1000000,
+    "provenance": {
+      "status": "demo"
+    },
+    "note": "Specification simulation only. No universal state-grant ceiling verified."
+  },
+  "charitableGrantCap": {
+    "value": 1000000,
+    "provenance": {
+      "status": "verified",
+      "sourceUrl": "https://www.gov.kz/memleket/entities/sci/press/news/details/1271028?lang=ru",
+      "checkedOn": "2026-09-18"
+    },
+    "scope": "Kazakhstan Khalkyna charitable program, restricted eligibility; not used to infer individual eligibility."
+  },
+  "cutoffSource": {
+    "status": "verified",
+    "sourceUrl": "https://astanait.edu.kz/ru/how-to-apply",
+    "checkedOn": "2026-09-18"
+  }
+}

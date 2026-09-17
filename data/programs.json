@@ -1,0 +1,1558 @@
+[
+  {
+    "id": "aitu-1",
+    "university": "Astana IT University",
+    "city": "Astana",
+    "country": "KZ",
+    "name": "Software Engineering",
+    "field": "it",
+    "adjacentFields": [
+      "engineering",
+      "science",
+      "design"
+    ],
+    "languages": [
+      "en"
+    ],
+    "tuitionPerYear": 2500000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": true,
+    "grantCutoff": 100,
+    "untCutoff": 100,
+    "cutoffProvenance": {
+      "status": "verified",
+      "sourceUrl": "https://astanait.edu.kz/ru/how-to-apply",
+      "checkedOn": "2026-09-18"
+    },
+    "requiresIelts": null,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-07-20",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore software engineering alongside related it options.",
+    "cutoffLabel": "Published grant participation threshold; not a competitive result",
+    "identityProvenance": {
+      "status": "verified",
+      "sourceUrl": "https://astanait.edu.kz/ru/how-to-apply",
+      "checkedOn": "2026-09-18"
+    }
+  },
+  {
+    "id": "aitu-2",
+    "university": "Astana IT University",
+    "city": "Astana",
+    "country": "KZ",
+    "name": "Computer Science",
+    "field": "it",
+    "adjacentFields": [
+      "engineering",
+      "science",
+      "design"
+    ],
+    "languages": [
+      "en"
+    ],
+    "tuitionPerYear": 2500000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": true,
+    "grantCutoff": 100,
+    "untCutoff": 100,
+    "cutoffProvenance": {
+      "status": "verified",
+      "sourceUrl": "https://astanait.edu.kz/ru/how-to-apply",
+      "checkedOn": "2026-09-18"
+    },
+    "requiresIelts": null,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-07-20",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore computer science alongside related it options.",
+    "cutoffLabel": "Published grant participation threshold; not a competitive result",
+    "identityProvenance": {
+      "status": "verified",
+      "sourceUrl": "https://astanait.edu.kz/ru/how-to-apply",
+      "checkedOn": "2026-09-18"
+    }
+  },
+  {
+    "id": "aitu-3",
+    "university": "Astana IT University",
+    "city": "Astana",
+    "country": "KZ",
+    "name": "Big Data Analysis",
+    "field": "it",
+    "adjacentFields": [
+      "engineering",
+      "science",
+      "design"
+    ],
+    "languages": [
+      "en"
+    ],
+    "tuitionPerYear": 2500000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": true,
+    "grantCutoff": 100,
+    "untCutoff": 100,
+    "cutoffProvenance": {
+      "status": "verified",
+      "sourceUrl": "https://astanait.edu.kz/ru/how-to-apply",
+      "checkedOn": "2026-09-18"
+    },
+    "requiresIelts": null,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-07-20",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore big data analysis alongside related it options.",
+    "cutoffLabel": "Published grant participation threshold; not a competitive result",
+    "identityProvenance": {
+      "status": "verified",
+      "sourceUrl": "https://astanait.edu.kz/ru/how-to-apply",
+      "checkedOn": "2026-09-18"
+    }
+  },
+  {
+    "id": "aitu-4",
+    "university": "Astana IT University",
+    "city": "Astana",
+    "country": "KZ",
+    "name": "Cybersecurity",
+    "field": "it",
+    "adjacentFields": [
+      "engineering",
+      "science",
+      "design"
+    ],
+    "languages": [
+      "en"
+    ],
+    "tuitionPerYear": 2500000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": true,
+    "grantCutoff": 93,
+    "untCutoff": 93,
+    "cutoffProvenance": {
+      "status": "verified",
+      "sourceUrl": "https://astanait.edu.kz/ru/how-to-apply",
+      "checkedOn": "2026-09-18"
+    },
+    "requiresIelts": null,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-07-20",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore cybersecurity alongside related it options.",
+    "cutoffLabel": "Published grant participation threshold; not a competitive result",
+    "identityProvenance": {
+      "status": "verified",
+      "sourceUrl": "https://astanait.edu.kz/ru/how-to-apply",
+      "checkedOn": "2026-09-18"
+    }
+  },
+  {
+    "id": "aitu-5",
+    "university": "Astana IT University",
+    "city": "Astana",
+    "country": "KZ",
+    "name": "Smart Technologies",
+    "field": "engineering",
+    "adjacentFields": [
+      "science",
+      "it"
+    ],
+    "languages": [
+      "en"
+    ],
+    "tuitionPerYear": 2500000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": true,
+    "grantCutoff": 85,
+    "untCutoff": 85,
+    "cutoffProvenance": {
+      "status": "verified",
+      "sourceUrl": "https://astanait.edu.kz/ru/how-to-apply",
+      "checkedOn": "2026-09-18"
+    },
+    "requiresIelts": null,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-07-20",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore smart technologies alongside related engineering options.",
+    "cutoffLabel": "Published grant participation threshold; not a competitive result",
+    "identityProvenance": {
+      "status": "verified",
+      "sourceUrl": "https://astanait.edu.kz/ru/how-to-apply",
+      "checkedOn": "2026-09-18"
+    }
+  },
+  {
+    "id": "aitu-6",
+    "university": "Astana IT University",
+    "city": "Astana",
+    "country": "KZ",
+    "name": "Electronic Engineering",
+    "field": "engineering",
+    "adjacentFields": [
+      "science",
+      "it"
+    ],
+    "languages": [
+      "en"
+    ],
+    "tuitionPerYear": 2500000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": true,
+    "grantCutoff": 75,
+    "untCutoff": 75,
+    "cutoffProvenance": {
+      "status": "verified",
+      "sourceUrl": "https://astanait.edu.kz/ru/how-to-apply",
+      "checkedOn": "2026-09-18"
+    },
+    "requiresIelts": null,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-07-20",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore electronic engineering alongside related engineering options.",
+    "cutoffLabel": "Published grant participation threshold; not a competitive result",
+    "identityProvenance": {
+      "status": "verified",
+      "sourceUrl": "https://astanait.edu.kz/ru/how-to-apply",
+      "checkedOn": "2026-09-18"
+    }
+  },
+  {
+    "id": "aitu-7",
+    "university": "Astana IT University",
+    "city": "Astana",
+    "country": "KZ",
+    "name": "IT Management",
+    "field": "business",
+    "adjacentFields": [
+      "law",
+      "humanities"
+    ],
+    "languages": [
+      "en"
+    ],
+    "tuitionPerYear": 2500000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": true,
+    "grantCutoff": 75,
+    "untCutoff": 75,
+    "cutoffProvenance": {
+      "status": "verified",
+      "sourceUrl": "https://astanait.edu.kz/ru/how-to-apply",
+      "checkedOn": "2026-09-18"
+    },
+    "requiresIelts": null,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-07-20",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore it management alongside related business options.",
+    "cutoffLabel": "Published grant participation threshold; not a competitive result",
+    "identityProvenance": {
+      "status": "verified",
+      "sourceUrl": "https://astanait.edu.kz/ru/how-to-apply",
+      "checkedOn": "2026-09-18"
+    }
+  },
+  {
+    "id": "aitu-8",
+    "university": "Astana IT University",
+    "city": "Astana",
+    "country": "KZ",
+    "name": "Digital Journalism",
+    "field": "media",
+    "adjacentFields": [
+      "design",
+      "humanities"
+    ],
+    "languages": [
+      "en"
+    ],
+    "tuitionPerYear": 2500000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": true,
+    "grantCutoff": 75,
+    "untCutoff": 75,
+    "cutoffProvenance": {
+      "status": "verified",
+      "sourceUrl": "https://astanait.edu.kz/ru/how-to-apply",
+      "checkedOn": "2026-09-18"
+    },
+    "requiresIelts": null,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-07-20",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore digital journalism alongside related media options.",
+    "cutoffLabel": "Published grant participation threshold; not a competitive result",
+    "identityProvenance": {
+      "status": "verified",
+      "sourceUrl": "https://astanait.edu.kz/ru/how-to-apply",
+      "checkedOn": "2026-09-18"
+    }
+  },
+  {
+    "id": "kbtu-it",
+    "university": "KBTU",
+    "city": "Almaty",
+    "country": "KZ",
+    "name": "Information Systems",
+    "field": "it",
+    "adjacentFields": [
+      "engineering",
+      "science",
+      "design"
+    ],
+    "languages": [
+      "kk",
+      "ru"
+    ],
+    "tuitionPerYear": 3200000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": true,
+    "grantCutoff": 110,
+    "untCutoff": 110,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": null,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-07-20",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore information systems alongside related it options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  },
+  {
+    "id": "sdu-it",
+    "university": "SDU University",
+    "city": "Kaskelen",
+    "country": "KZ",
+    "name": "Computer Science",
+    "field": "it",
+    "adjacentFields": [
+      "engineering",
+      "science",
+      "design"
+    ],
+    "languages": [
+      "kk",
+      "ru"
+    ],
+    "tuitionPerYear": 2200000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": true,
+    "grantCutoff": 100,
+    "untCutoff": 100,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": null,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-07-20",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore computer science alongside related it options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  },
+  {
+    "id": "iitu-it",
+    "university": "IITU",
+    "city": "Almaty",
+    "country": "KZ",
+    "name": "Software Engineering",
+    "field": "it",
+    "adjacentFields": [
+      "engineering",
+      "science",
+      "design"
+    ],
+    "languages": [
+      "kk",
+      "ru"
+    ],
+    "tuitionPerYear": 1800000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": true,
+    "grantCutoff": 90,
+    "untCutoff": 90,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": null,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-07-20",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore software engineering alongside related it options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  },
+  {
+    "id": "satbayev-eng",
+    "university": "Satbayev University",
+    "city": "Almaty",
+    "country": "KZ",
+    "name": "Mechanical Engineering",
+    "field": "engineering",
+    "adjacentFields": [
+      "science",
+      "it"
+    ],
+    "languages": [
+      "kk",
+      "ru"
+    ],
+    "tuitionPerYear": 1200000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": true,
+    "grantCutoff": 75,
+    "untCutoff": 75,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": null,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-07-20",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore mechanical engineering alongside related engineering options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  },
+  {
+    "id": "enu-eng",
+    "university": "ENU",
+    "city": "Astana",
+    "country": "KZ",
+    "name": "Civil Engineering",
+    "field": "engineering",
+    "adjacentFields": [
+      "science",
+      "it"
+    ],
+    "languages": [
+      "kk",
+      "ru"
+    ],
+    "tuitionPerYear": 1350000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": true,
+    "grantCutoff": 85,
+    "untCutoff": 85,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": null,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-07-20",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore civil engineering alongside related engineering options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  },
+  {
+    "id": "kaznu-science",
+    "university": "Al-Farabi KazNU",
+    "city": "Almaty",
+    "country": "KZ",
+    "name": "Physics",
+    "field": "science",
+    "adjacentFields": [
+      "business"
+    ],
+    "languages": [
+      "kk",
+      "ru"
+    ],
+    "tuitionPerYear": 1400000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": true,
+    "grantCutoff": 85,
+    "untCutoff": 85,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": null,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-07-20",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore physics alongside related science options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  },
+  {
+    "id": "kaznu-law",
+    "university": "Al-Farabi KazNU",
+    "city": "Almaty",
+    "country": "KZ",
+    "name": "Law",
+    "field": "law",
+    "adjacentFields": [
+      "business"
+    ],
+    "languages": [
+      "kk",
+      "ru"
+    ],
+    "tuitionPerYear": 1500000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": true,
+    "grantCutoff": 100,
+    "untCutoff": 100,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": null,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-07-20",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore law alongside related law options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  },
+  {
+    "id": "kaznmu-med",
+    "university": "KazNMU",
+    "city": "Almaty",
+    "country": "KZ",
+    "name": "Medicine",
+    "field": "medicine",
+    "adjacentFields": [
+      "science"
+    ],
+    "languages": [
+      "kk",
+      "ru"
+    ],
+    "tuitionPerYear": 1900000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": true,
+    "grantCutoff": 120,
+    "untCutoff": 120,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": null,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-07-20",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore medicine alongside related medicine options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  },
+  {
+    "id": "amu-med",
+    "university": "Astana Medical University",
+    "city": "Astana",
+    "country": "KZ",
+    "name": "General Medicine",
+    "field": "medicine",
+    "adjacentFields": [
+      "science"
+    ],
+    "languages": [
+      "kk",
+      "ru"
+    ],
+    "tuitionPerYear": 1700000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": true,
+    "grantCutoff": 115,
+    "untCutoff": 115,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": null,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-07-20",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore general medicine alongside related medicine options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  },
+  {
+    "id": "abai-edu",
+    "university": "Abai University",
+    "city": "Almaty",
+    "country": "KZ",
+    "name": "Teacher Education",
+    "field": "education",
+    "adjacentFields": [
+      "humanities"
+    ],
+    "languages": [
+      "kk",
+      "ru"
+    ],
+    "tuitionPerYear": 950000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": true,
+    "grantCutoff": 80,
+    "untCutoff": 80,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": null,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-07-20",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore teacher education alongside related education options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  },
+  {
+    "id": "kaznaru-agri",
+    "university": "KazNARU",
+    "city": "Almaty",
+    "country": "KZ",
+    "name": "Agronomy",
+    "field": "agriculture",
+    "adjacentFields": [
+      "business"
+    ],
+    "languages": [
+      "kk",
+      "ru"
+    ],
+    "tuitionPerYear": 800000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": true,
+    "grantCutoff": 65,
+    "untCutoff": 65,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": null,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-07-20",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore agronomy alongside related agriculture options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  },
+  {
+    "id": "zhetysu-edu",
+    "university": "Zhetysu University",
+    "city": "Taldykorgan",
+    "country": "KZ",
+    "name": "Primary Education",
+    "field": "education",
+    "adjacentFields": [
+      "humanities"
+    ],
+    "languages": [
+      "kk",
+      "ru"
+    ],
+    "tuitionPerYear": 750000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": true,
+    "grantCutoff": 75,
+    "untCutoff": 75,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": null,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-07-20",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore primary education alongside related education options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  },
+  {
+    "id": "korkyt-eng",
+    "university": "Korkyt Ata University",
+    "city": "Kyzylorda",
+    "country": "KZ",
+    "name": "Engineering",
+    "field": "engineering",
+    "adjacentFields": [
+      "science",
+      "it"
+    ],
+    "languages": [
+      "kk",
+      "ru"
+    ],
+    "tuitionPerYear": 700000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": true,
+    "grantCutoff": 65,
+    "untCutoff": 65,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": null,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-07-20",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore engineering alongside related engineering options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  },
+  {
+    "id": "turan-design",
+    "university": "Turan University",
+    "city": "Almaty",
+    "country": "KZ",
+    "name": "Design",
+    "field": "design",
+    "adjacentFields": [
+      "business"
+    ],
+    "languages": [
+      "kk",
+      "ru"
+    ],
+    "tuitionPerYear": 1400000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": true,
+    "grantCutoff": 80,
+    "untCutoff": 80,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": null,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-07-20",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore design alongside related design options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  },
+  {
+    "id": "kimep-business",
+    "university": "KIMEP University",
+    "city": "Almaty",
+    "country": "KZ",
+    "name": "Business Administration",
+    "field": "business",
+    "adjacentFields": [
+      "law",
+      "humanities"
+    ],
+    "languages": [
+      "kk",
+      "ru"
+    ],
+    "tuitionPerYear": 5500000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": true,
+    "grantCutoff": 100,
+    "untCutoff": 100,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": null,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-07-20",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore business administration alongside related business options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  },
+  {
+    "id": "kargu-human",
+    "university": "Buketov University",
+    "city": "Karaganda",
+    "country": "KZ",
+    "name": "History",
+    "field": "humanities",
+    "adjacentFields": [
+      "business"
+    ],
+    "languages": [
+      "kk",
+      "ru"
+    ],
+    "tuitionPerYear": 850000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": true,
+    "grantCutoff": 70,
+    "untCutoff": 70,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": null,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-07-20",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore history alongside related humanities options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  },
+  {
+    "id": "metu-it",
+    "university": "METU",
+    "city": "Ankara",
+    "country": "TR",
+    "name": "Computer Engineering",
+    "field": "it",
+    "adjacentFields": [
+      "engineering",
+      "science",
+      "design"
+    ],
+    "languages": [
+      "en"
+    ],
+    "tuitionPerYear": 2800000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": false,
+    "grantCutoff": null,
+    "untCutoff": 110,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": 6,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-04-15",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore computer engineering alongside related it options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  },
+  {
+    "id": "itu-eng",
+    "university": "Istanbul Technical University",
+    "city": "Istanbul",
+    "country": "TR",
+    "name": "Engineering",
+    "field": "engineering",
+    "adjacentFields": [
+      "science",
+      "it"
+    ],
+    "languages": [
+      "en"
+    ],
+    "tuitionPerYear": 2600000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": false,
+    "grantCutoff": null,
+    "untCutoff": 105,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": 6,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-04-15",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore engineering alongside related engineering options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  },
+  {
+    "id": "elte-it",
+    "university": "ELTE",
+    "city": "Budapest",
+    "country": "HU",
+    "name": "Computer Science",
+    "field": "it",
+    "adjacentFields": [
+      "engineering",
+      "science",
+      "design"
+    ],
+    "languages": [
+      "en"
+    ],
+    "tuitionPerYear": 4200000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": false,
+    "grantCutoff": null,
+    "untCutoff": 105,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": 6,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-04-15",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore computer science alongside related it options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  },
+  {
+    "id": "debrecen-med",
+    "university": "University of Debrecen",
+    "city": "Debrecen",
+    "country": "HU",
+    "name": "Medicine",
+    "field": "medicine",
+    "adjacentFields": [
+      "science"
+    ],
+    "languages": [
+      "en"
+    ],
+    "tuitionPerYear": 8500000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": false,
+    "grantCutoff": null,
+    "untCutoff": 115,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": 6,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-04-15",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore medicine alongside related medicine options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  },
+  {
+    "id": "warsaw-business",
+    "university": "University of Warsaw",
+    "city": "Warsaw",
+    "country": "PL",
+    "name": "Management",
+    "field": "business",
+    "adjacentFields": [
+      "law",
+      "humanities"
+    ],
+    "languages": [
+      "en"
+    ],
+    "tuitionPerYear": 3000000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": false,
+    "grantCutoff": null,
+    "untCutoff": 90,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": 6,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-04-15",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore management alongside related business options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  },
+  {
+    "id": "wut-eng",
+    "university": "Warsaw University of Technology",
+    "city": "Warsaw",
+    "country": "PL",
+    "name": "Electrical Engineering",
+    "field": "engineering",
+    "adjacentFields": [
+      "science",
+      "it"
+    ],
+    "languages": [
+      "en"
+    ],
+    "tuitionPerYear": 3800000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": false,
+    "grantCutoff": null,
+    "untCutoff": 100,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": 6,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-04-15",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore electrical engineering alongside related engineering options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  },
+  {
+    "id": "charles-human",
+    "university": "Charles University",
+    "city": "Prague",
+    "country": "CZ",
+    "name": "Humanities",
+    "field": "humanities",
+    "adjacentFields": [
+      "business"
+    ],
+    "languages": [
+      "en"
+    ],
+    "tuitionPerYear": 3500000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": false,
+    "grantCutoff": null,
+    "untCutoff": 85,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": 6,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-04-15",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore humanities alongside related humanities options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  },
+  {
+    "id": "ctu-it",
+    "university": "Czech Technical University",
+    "city": "Prague",
+    "country": "CZ",
+    "name": "Informatics",
+    "field": "it",
+    "adjacentFields": [
+      "engineering",
+      "science",
+      "design"
+    ],
+    "languages": [
+      "en"
+    ],
+    "tuitionPerYear": 3700000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": false,
+    "grantCutoff": null,
+    "untCutoff": 100,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": 6,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-04-15",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore informatics alongside related it options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  },
+  {
+    "id": "um-science",
+    "university": "Universiti Malaya",
+    "city": "Kuala Lumpur",
+    "country": "MY",
+    "name": "Biological Science",
+    "field": "science",
+    "adjacentFields": [
+      "business"
+    ],
+    "languages": [
+      "en"
+    ],
+    "tuitionPerYear": 2200000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": false,
+    "grantCutoff": null,
+    "untCutoff": 85,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": 6,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-04-15",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore biological science alongside related science options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  },
+  {
+    "id": "tongji-design",
+    "university": "Tongji University",
+    "city": "Shanghai",
+    "country": "CN",
+    "name": "Design",
+    "field": "design",
+    "adjacentFields": [
+      "business"
+    ],
+    "languages": [
+      "en"
+    ],
+    "tuitionPerYear": 3200000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": false,
+    "grantCutoff": null,
+    "untCutoff": 100,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": 6,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-04-15",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore design alongside related design options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  },
+  {
+    "id": "westminster-business",
+    "university": "WIUT",
+    "city": "Tashkent",
+    "country": "UZ",
+    "name": "Business Management",
+    "field": "business",
+    "adjacentFields": [
+      "law",
+      "humanities"
+    ],
+    "languages": [
+      "en"
+    ],
+    "tuitionPerYear": 2300000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": false,
+    "grantCutoff": null,
+    "untCutoff": 80,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": 6,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-04-15",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore business management alongside related business options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  },
+  {
+    "id": "tashkent-agri",
+    "university": "Tashkent State Agrarian University",
+    "city": "Tashkent",
+    "country": "UZ",
+    "name": "Agriculture",
+    "field": "agriculture",
+    "adjacentFields": [
+      "business"
+    ],
+    "languages": [
+      "en"
+    ],
+    "tuitionPerYear": 1200000,
+    "tuitionProvenance": {
+      "status": "demo"
+    },
+    "grantAvailable": false,
+    "grantCutoff": null,
+    "untCutoff": 70,
+    "cutoffProvenance": {
+      "status": "demo"
+    },
+    "requiresIelts": 6,
+    "deadlines": [
+      {
+        "label": "Planning application date",
+        "date": "2027-04-15",
+        "appliesTo": "application",
+        "provenance": {
+          "status": "expected",
+          "basis": "Planning assumption for an autumn intake; confirm the university’s announced dates."
+        }
+      }
+    ],
+    "whyNotable": "Explore agriculture alongside related agriculture options.",
+    "cutoffLabel": "Illustrative comparison benchmark",
+    "identityProvenance": {
+      "status": "demo"
+    }
+  }
+]
