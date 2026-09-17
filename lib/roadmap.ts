@@ -119,7 +119,7 @@ export function buildRoadmap(
 ): Roadmap {
   const phases: Phase[] = ["exams", "documents", "applications", "activities"];
   const year = p.startYear ?? 2027;
-  const tasks = selected
+  const candidates = selected
     .flatMap((m) => {
       const deadline = m.program.deadlines?.[0];
       const anchors = {
@@ -134,9 +134,15 @@ export function buildRoadmap(
         const d = new Date(`${anchors[t.anchor]}T12:00:00Z`);
         d.setUTCDate(d.getUTCDate() + t.offsetDays);
         return {
-          id: `${m.program.id}:${year}:${t.id}`,
+          id: `${["unt-register", "unt-sit", "transcript", "id-passport", "portfolio-olympiad"].includes(t.id) ? "shared" : m.program.id}:${year}:${t.id}`,
           phase: t.phase,
-          title: t.title,
+          title: [
+            "university-application",
+            "scholarship-application",
+            "grant-documents",
+          ].includes(t.id)
+            ? `${t.title} — ${m.program.name}`
+            : t.title,
           why: t.why,
           date: d.toISOString().slice(0, 10),
           programId: m.program.id,
@@ -148,6 +154,10 @@ export function buildRoadmap(
       });
     })
     .sort((a, b) => a.date.localeCompare(b.date) || a.id.localeCompare(b.id));
+  const tasks = candidates.filter(
+    (task, index) =>
+      candidates.findIndex((other) => other.id === task.id) === index,
+  );
   void today;
   return {
     phases: phases.map((phase) => ({

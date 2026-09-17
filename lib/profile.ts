@@ -40,6 +40,7 @@ export const REGIONS: Region[] = [
   "any",
 ];
 export const LABELS: Record<string, string> = {
+  unt: "UNT score", grade:"Grade", gradeBand:"School grades", budget:"Budget", regions:"Study regions", languages:"Study languages", englishCert:"English certificate", startYear:"Start year",
   it: "IT & computing",
   medicine: "Medicine",
   engineering: "Engineering",

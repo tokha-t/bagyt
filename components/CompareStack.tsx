@@ -57,7 +57,7 @@ export default function CompareStack({
         {results.map((r) => (
           <details className="panel" key={r.program.id} open>
             <summary>
-              {r.program.name}
+              <h2>{r.program.name}</h2>
               <small>{r.program.university}</small>
               <SourceBadge provenance={DEMO} />
             </summary>

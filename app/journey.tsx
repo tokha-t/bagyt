@@ -290,11 +290,13 @@ function ProfileQuestions({
   );
 }
 function describe(v: unknown): string {
-  return v === undefined
-    ? "not specified"
-    : typeof v === "object"
-      ? JSON.stringify(v)
-      : String(v);
+  if(v === undefined) return "not specified";
+  if(Array.isArray(v)) return v.map(x=>LABELS[String(x)]??String(x)).join(", ") || "not specified";
+  if(v && typeof v === "object") {
+    if("kind" in v) return "band" in v ? `IELTS ${v.band}` : "score" in v ? `TOEFL ${v.score}` : String(v.kind);
+    return Object.entries(v).map(([k,value])=>`${LABELS[k]??k}: ${value}`).join(", ");
+  }
+  return LABELS[String(v)]??String(v);
 }
 export default function Journey({ today: initialToday }: { today: string }) {
   const [today, setToday] = useState(initialToday);

@@ -947,3 +947,16 @@ meter::-moz-meter-bar {
     scroll-behavior: auto;
   }
 }
+
+@media (max-width: 360px) {
+  .progress li:first-child {
+    display: none;
+  }
+  .progress ol {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+.compare-mobile summary h2 {
+  display: inline;
+  font-size: 20px;
+}
