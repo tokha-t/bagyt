@@ -95,6 +95,7 @@ export interface Program {
   grantCutoff: number | null; // UNT points; null when grantAvailable is false
   untCutoff: number; // typical competitive score
   cutoffProvenance: Provenance;
+  grantCutoffProvenance?: Provenance; // set when grantCutoff has its own source
   requiresIelts: number | null; // minimum band
   deadlines: Deadline[];
   whyNotable: string; // one sentence, rendered on the card

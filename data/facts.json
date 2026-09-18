@@ -20,5 +20,49 @@
     "status": "verified",
     "sourceUrl": "https://astanait.edu.kz/ru/how-to-apply",
     "checkedOn": "2026-09-18"
+  },
+  "grantDirectionShare2026": {
+    "value": 60,
+    "unit": "percent",
+    "provenance": {
+      "status": "verified",
+      "sourceUrl": "https://www.gov.kz/memleket/entities/sci/press/news/details/1270585?lang=ru",
+      "checkedOn": "2026-09-18"
+    },
+    "scope": "Share of 2026-2027 state educational grants directed to engineering and technical directions, on the instruction of the Head of State. Allocation by direction, not an individual applicant’s chance."
+  },
+  "bachelorGrantApplications2026": {
+    "value": 127000,
+    "approximate": true,
+    "provenance": {
+      "status": "verified",
+      "sourceUrl": "https://www.gov.kz/memleket/entities/sci/press/news/details/1270585?lang=ru",
+      "checkedOn": "2026-09-18"
+    },
+    "scope": "Approximate number of applications to the 2026 bachelor grant competition; about 14 000 more than 2025. Against roughly 75 000 bachelor grants awarded."
+  },
+  "serpin2026": {
+    "value": 2000,
+    "approximate": true,
+    "provenance": {
+      "status": "verified",
+      "sourceUrl": "https://www.gov.kz/memleket/entities/sci/press/news/details/1270585?lang=ru",
+      "checkedOn": "2026-09-18"
+    },
+    "scope": "More than two thousand 2026-2027 grant holders study at universities in northern, eastern and central Kazakhstan under the «Serpin» project."
+  },
+  "kimepTuition2026": {
+    "valuePerCredit": 163230,
+    "perYearRange": [
+      4896900,
+      5876280
+    ],
+    "currency": "KZT",
+    "provenance": {
+      "status": "verified",
+      "sourceUrl": "https://www.kimep.kz/prospective-students/files/2026/05/tuition_fees_ugrad_eng.pdf",
+      "checkedOn": "2026-09-18"
+    },
+    "scope": "KIMEP publishes a per-credit price for 2026-2027 and a recommended 30-36 credits per year; 146 credits are required for the degree."
   }
 }

@@ -24,6 +24,10 @@ export const programs: Program[] = raw.map(
       ...p,
       tuitionProvenance: validateProvenance(p.tuitionProvenance as Provenance),
       cutoffProvenance: validateProvenance(p.cutoffProvenance as Provenance),
+      grantCutoffProvenance:
+        "grantCutoffProvenance" in p && p.grantCutoffProvenance
+          ? validateProvenance(p.grantCutoffProvenance as Provenance)
+          : undefined,
       deadlines: p.deadlines.map((d) => ({
         ...d,
         provenance: validateProvenance(d.provenance as Provenance),

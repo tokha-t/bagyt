@@ -68,7 +68,7 @@ Environment files are ignored from the initial commit. Never put secrets in clie
 
 ## 6. Verification scenario
 
-There is no automated test suite deliverable. See [QA.md](QA.md) for executed checks and outstanding gates. Do not treat an unchecked gate as passed.
+There is no automated test suite deliverable. See [QA.md](QA.md) for executed checks and outstanding gates, and [SPEC.md](SPEC.md) for the reconstructed requirement register and current progress state. Do not treat an unchecked gate as passed.
 
 1. At 390×844 open landing and confirm the CTA is visible.
 2. Complete all nine questions, testing step back and browser back/forward.
@@ -108,6 +108,14 @@ Checked on 2026-09-18:
 - [Ministry announcement for Қазақстан халқына charitable grants](https://www.gov.kz/memleket/entities/sci/press/news/details/1271028?lang=ru): the 1,000,000 ₸ ceiling belongs to this restricted charitable program. It is stored with its correct scope in `data/facts.json` and is not evidence of a universal state-grant cap.
 - [2026 UNT announcement](https://www.gov.kz/memleket/entities/sci/press/news/details/1197627?lang=ru): general national eligibility thresholds, researched but not substituted for program competition scores.
 
+Added on 2026-09-18 after a dedicated data-research pass:
+
+- [KIMEP tuition and fees 2026-2027](https://www.kimep.kz/prospective-students/files/2026/05/tuition_fees_ugrad_eng.pdf): **verified**. KZT 163,230 per academic credit, a recommended 30–36 credits per year (KZT 4,896,900–5,876,280 per year) and 146 credits for the degree. The dataset stores 5,876,280 ₸/year, the 36-credit load needed to finish in four years.
+- [Ministry of Science and Higher Education, grant results 2026-2027](https://www.gov.kz/memleket/entities/sci/press/news/details/1270585?lang=ru): **verified**. 60% of 2026-2027 grants directed to engineering and technical directions; more than 75,000 bachelor grant holders; about 127,000 applications; more than 2,000 «Serpin» grant holders in northern, eastern and central Kazakhstan. Allocation by direction is not an individual applicant's chance.
+- univision.kz (tier-4 aggregator, checked 2026-09-18): annual prices for AITU (2,500,000 ₸ for every bachelor programme), KazNMU 6B10101 (1,230,700 ₸), Abai 6B01101 (900,000 ₸), KazNARU 6B08101 (800,000 ₸), Zhetysu 6B01301 (750,000 ₸) and the Satbayev 6B071xx engineering band (1,111,380 ₸). Also the 2025 grant passing scores (проходной балл, общий конкурс) used for `grantCutoff`. All of these render as **expected** with the aggregator and the scope named, not as verified — an aggregator is not a primary source.
+
+Three different Kazakh numbers are deliberately kept apart in the dataset and the interface: the ministry **пороговый балл** (minimum to enter the competition), the **проходной балл** (what actually won a grant in a given year, stored as `grantCutoff` and labelled 2025) and a university's own **внутренний порог** (stored as `untCutoff`; the eight AITU rows carry the university's published participation thresholds).
+
 Dataset: 36 program rows, 24 in Kazakhstan, 11 distinct fields, 24 demo grant-availability assumptions, eight source-linked cutoff rows. Tuition, unverified program details, foreign UNT proxies and other unsourced numerical benchmarks are visibly demo-labelled. Future dates are expected planning assumptions with a visible basis. There is no runtime scraping.
 
 ## 9. AI and APIs used
@@ -120,7 +128,8 @@ Next.js `create-next-app` scaffold, Next routing/runtime, React, Tailwind CSS/Po
 
 ## 11. Known limitations and specification clarifications
 
-- This is a 36-row prototype, not a comprehensive admissions catalogue. Most figures remain demo data.
+- This is a 36-row prototype, not a comprehensive admissions catalogue. Six of the 24 Kazakh tuition figures and nine grant cut-offs now carry a source; the rest remain demo data.
+- Tuition that could **not** be found and therefore stays demo: KBTU (publishes a per-credit price only, and the current price list on the site is 2025-2026), SDU (per-ECTS prices published inside a Google Drive PDF that cannot be read), IITU, ENU Gumilyov, Al-Farabi KazNU, Astana Medical University, Buketov University, Korkyt Ata University (univision lists no price at all) and Turan Design (univision shows the arts cluster at 1,284,000 ₸ but no Design row). Blank was chosen over a plausible guess in every one of these.
 - The requested universal state-grant cap could not be verified. A simulated 1,000,000 ₸ cap exercises the specified financial formula but is disclosed as demo; F16 AC16.4 is not claimed passed. Do not use the simulated gap as a quote for actual grant coverage.
 - AITU values are published participation thresholds, not historical competitive results. The specification’s “typical competitive score” interpretation is therefore not claimed verified. Eight verified threshold rows exist with their precise scope visible.
 - Foreign UNT benchmarks are demo proxies, not foreign admissions requirements. Test subject combinations, creative exams, AITU AET, visas and individual grant eligibility are not modelled.

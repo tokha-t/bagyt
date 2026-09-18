@@ -58,13 +58,29 @@ export default function MatchCard({
           <small>
             {r.program.cutoffProvenance.status === "verified"
               ? "Published grant participation threshold; not a competitive result."
-              : "Illustrative benchmark."}
+              : r.program.cutoffProvenance.status === "expected"
+                ? "Published threshold for this programme group; not a competitive result."
+                : "Illustrative benchmark."}
           </small>
         </p>
+        {r.program.grantCutoffProvenance && r.program.grantCutoff !== null && (
+          <p>
+            2025 grant cut-off: {r.program.grantCutoff}{" "}
+            <SourceBadge provenance={r.program.grantCutoffProvenance} />
+            <small>
+              What won a grant in 2025. The 2026 and later figures are not
+              announced, so this is history, not a requirement.
+            </small>
+          </p>
+        )}
         {r.grantGap !== undefined && (
           <p>
             Simulated annual tuition gap: {money(r.grantGap)}{" "}
             <SourceBadge provenance={DEMO} />
+            <small>
+              A grant covering tuition is not the same as studying free: this
+              gap, plus living costs, stays payable.
+            </small>
           </p>
         )}
       </div>
