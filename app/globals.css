@@ -120,7 +120,7 @@ button.primary,
   padding-inline: 8px;
 }
 .eyebrow {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 650;
   letter-spacing: 0.14em;
   color: var(--color-ink-muted);
@@ -316,7 +316,7 @@ button.primary,
   height: 24px;
   border-radius: 50%;
   border: 1px solid var(--color-border);
-  font-size: 11px;
+  font-size: 12px;
 }
 .progress button[aria-current] {
   font-weight: 600;
@@ -329,7 +329,7 @@ button.primary,
   border-color: var(--color-primary);
 }
 .progress small {
-  font-size: 11px;
+  font-size: 12px;
 }
 .content {
   max-width: 960px;
@@ -359,7 +359,7 @@ button.primary,
   letter-spacing: -0.02em;
 }
 .questions legend span {
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0;
   text-transform: uppercase;
   color: var(--color-ink-muted);
@@ -415,7 +415,7 @@ input[type="checkbox"] {
   color: var(--color-ink-muted);
 }
 .source {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 450;
   letter-spacing: 0;
   line-height: 1.45;
@@ -526,7 +526,7 @@ summary {
   font-size: 12px;
 }
 .tier {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   padding: 4px 8px;
   border-radius: 8px;
@@ -574,7 +574,7 @@ summary {
   font-size: 12px;
 }
 .dimension p {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--color-ink-muted);
   margin: 8px 0;
 }
@@ -653,7 +653,7 @@ meter::-moz-meter-bar {
   font-weight: 600;
 }
 .compare-table td p {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--color-ink-muted);
 }
 .compare-mobile {
@@ -734,7 +734,7 @@ meter::-moz-meter-bar {
   display: flex;
   justify-content: space-between;
   gap: 16px;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--color-ink-muted);
 }
 .skip-link {
@@ -871,11 +871,11 @@ meter::-moz-meter-bar {
     display: none;
   }
   .scope {
-    font-size: 11px;
+    font-size: 12px;
     margin-top: 16px;
   }
   .landing-footer {
-    font-size: 10px;
+    font-size: 12px;
     gap: 12px;
     padding-top: 16px;
   }
