@@ -510,7 +510,11 @@ export default function Journey({ today: initialToday }: { today: string }) {
     ) ?? [];
   if (stage === 1)
     return (
-      <Landing onStart={() => go("/profile")} />
+      <Landing
+        // No query: step 1 must ask for grade and field rather than arriving
+        // pre-filled with defaults, or AC2.4's required-answer gate never fires.
+        onStart={() => go("/profile", new URLSearchParams())}
+      />
     );
   return (
     <div className="app-shell">
