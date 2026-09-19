@@ -41,7 +41,7 @@ import NextActionCard from "@/components/NextActionCard";
 import PhaseGroup from "@/components/PhaseGroup";
 import EmptyState from "@/components/EmptyState";
 import SourceBadge from "@/components/SourceBadge";
-import { MarkWall } from "@/components/Mark";
+import Landing from "@/components/Landing";
 const routes = [
   "/",
   "/profile",
@@ -325,7 +325,6 @@ export default function Journey({ today: initialToday }: { today: string }) {
     | 4
     | 5
     | 6;
-;
   const step = Math.max(1, Math.min(3, Number(search.get("step")) || 1));
   const [error, setError] = useState("");
   const [editStep, setEditStep] = useState(1);
@@ -475,54 +474,7 @@ export default function Journey({ today: initialToday }: { today: string }) {
     ) ?? [];
   if (stage === 1)
     return (
-      <main className="landing">
-        <MarkWall />
-        <header className="brand">
-          <span className="brand-mark">↗</span> vilion
-          <span className="brand-note">See where you fit</span>
-        </header>
-        <section className="hero">
-          <div className="hero-copy">
-            <p className="eyebrow">YOUR NEXT CHAPTER STARTS HERE</p>
-            <h1>
-              A future that
-              <br />
-              feels like <em>you.</em>
-            </h1>
-            <p className="hero-intro">
-              Turn what you know about yourself into university options — and
-              one clear next step.
-            </p>
-            <button
-              className="primary hero-cta"
-              onClick={() => {
-                window.history.pushState(null, "", "/profile");
-                window.scrollTo({ top: 0 });
-              }}
-            >
-              Find my direction <span>↗</span>
-            </button>
-            <p className="scope">
-              For grades 9–11 in Kazakhstan. A planning guide using verified,
-              expected and demo-labelled data.
-            </p>
-          </div>
-          <div className="path-art" aria-hidden="true">
-            <div className="orbit o1" />
-            <div className="orbit o2" />
-            <div className="orbit o3" />
-            <div className="compass">↗</div>
-            <span className="art-label l1">Your interests</span>
-            <span className="art-label l2">Your options</span>
-            <span className="art-label l3">Your next step</span>
-          </div>
-        </section>
-        <footer className="landing-footer">
-          <span>01 / Know yourself</span>
-          <span>02 / Explore your fit</span>
-          <span>03 / Take a step</span>
-        </footer>
-      </main>
+      <Landing onStart={() => go("/profile")} />
     );
   return (
     <div className="app-shell">

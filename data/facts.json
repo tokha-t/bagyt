@@ -64,5 +64,22 @@
       "checkedOn": "2026-09-18"
     },
     "scope": "KIMEP publishes a per-credit price for 2026-2027 and a recommended 30-36 credits per year; 146 credits are required for the degree."
+  },
+  "bachelorGrants2026": {
+    "value": 75371,
+    "provenance": {
+      "status": "expected",
+      "basis": "univision.kz reports 89,457 state grants for 2026-2027 of which 75,371 are bachelor places (tier 4); the ministry itself states \"more than 75 thousand\". Checked 18 Sept 2026."
+    },
+    "scope": "Bachelor state education grants for the 2026-2027 academic year."
+  },
+  "untMaximumScore": {
+    "value": 140,
+    "provenance": {
+      "status": "verified",
+      "sourceUrl": "https://www.gov.kz/memleket/entities/sci/press/news/details/1197627?lang=ru",
+      "checkedOn": "2026-09-18"
+    },
+    "scope": "Maximum attainable UNT score. Separate from the three thresholds that are routinely confused with each other."
   }
 }
