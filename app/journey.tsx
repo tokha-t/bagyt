@@ -5,7 +5,7 @@ import {
   Profile,
   Grade,
   Field,
-  GradeBand,
+  Gpa,
   BudgetBand,
   Region,
   StartYear,
@@ -116,16 +116,17 @@ function ProfileQuestions({
             />
           </fieldset>
           <fieldset>
-            <legend>03 / How are your school grades?</legend>
+            <legend>03 / Your average school grade?</legend>
             <ChipSelect
-              options={opts(["excellent", "good", "average", "undisclosed"])}
-              value={p.gradeBand ?? null}
+              options={opts(["5.0", "4.0", "3.0", "unknown"])}
+              value={p.gpa ?? null}
               mode="single"
-              ariaLabel="School grades"
-              onChange={(v) => set("gradeBand", v as GradeBand)}
+              ariaLabel="Average school grade"
+              onChange={(v) => set("gpa", v as Gpa)}
             />
-            <button className="text-button" onClick={() => skip("gradeBand")}>
-              Skip grades
+            <p className="hint">Kazakhstan’s 5-point school scale.</p>
+            <button className="text-button" onClick={() => skip("gpa")}>
+              Skip this
             </button>
           </fieldset>
         </>

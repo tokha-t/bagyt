@@ -1,7 +1,7 @@
 import {
   Profile,
   Field,
-  GradeBand,
+  Gpa,
   Lang,
   LangLevel,
   BudgetBand,
@@ -40,7 +40,7 @@ export const REGIONS: Region[] = [
   "any",
 ];
 export const LABELS: Record<string, string> = {
-  unt: "UNT score", grade:"Grade", gradeBand:"School grades", budget:"Budget", regions:"Study regions", languages:"Study languages", englishCert:"English certificate", startYear:"Start year",
+  unt: "UNT score", grade:"Grade", gpa:"School GPA", budget:"Budget", regions:"Study regions", languages:"Study languages", englishCert:"English certificate", startYear:"Start year",
   it: "IT & computing",
   medicine: "Medicine",
   engineering: "Engineering",
@@ -74,12 +74,20 @@ export const LABELS: Record<string, string> = {
   field: "Your interests",
   geography: "Location",
   timing: "Preparation time",
+  "5.0": "5.0",
+  "4.0": "4.0",
+  "3.0": "3.0",
+  unknown: "Not sure",
 };
-const bands: Record<string, GradeBand> = {
-  e: "excellent",
-  g: "good",
-  a: "average",
-  u: "undisclosed",
+// Current codes plus the pre-v3 gradeBand letters, so shared links keep meaning.
+const bands: Record<string, Gpa> = {
+  "5": "5.0",
+  "4": "4.0",
+  "3": "3.0",
+  u: "unknown",
+  e: "5.0",
+  g: "4.0",
+  a: "3.0",
 };
 const levels: Record<string, LangLevel> = {
   f: "fluent",
@@ -97,7 +105,7 @@ export function decodeProfile(qs: string | URLSearchParams): Profile {
     const f = q.get("f");
     if (FIELDS.includes(f as Field)) p.field = f as Field;
     const gb = q.get("gb");
-    if (gb && bands[gb]) p.gradeBand = bands[gb];
+    if (gb && bands[gb]) p.gpa = bands[gb];
     const u = q.get("unt");
     if (u && /^\d+$/.test(u) && +u >= 50 && +u <= 140) p.unt = +u;
     const langs: Partial<Record<Lang, LangLevel>> = {};
@@ -134,7 +142,7 @@ export function encodeProfile(p: Profile): string {
   const q = new URLSearchParams();
   q.set("g", p.grade === "graduated" ? "grad" : String(p.grade));
   q.set("f", p.field);
-  if (p.gradeBand) q.set("gb", p.gradeBand[0]);
+  if (p.gpa) q.set("gb", p.gpa === "unknown" ? "u" : p.gpa[0]);
   if (p.unt !== undefined) q.set("unt", String(p.unt));
   if (p.languages) {
     const l = (["kk", "ru", "en"] as Lang[])

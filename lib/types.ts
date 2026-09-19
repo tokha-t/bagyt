@@ -14,7 +14,15 @@ export type Field =
   | "agriculture"
   | "undecided";
 
-export type GradeBand = "excellent" | "good" | "average" | "undisclosed";
+export type Gpa = "5.0" | "4.0" | "3.0" | "unknown";
+
+/** Kazakhstan's 5-point school scale. */
+export const GPA_SCORE: Record<Gpa, number> = {
+  "5.0": 80,
+  "4.0": 62,
+  "3.0": 45,
+  unknown: 55,
+};
 export type Lang = "kk" | "ru" | "en";
 export type LangLevel = "fluent" | "working" | "basic";
 export type BudgetBand =
@@ -42,7 +50,7 @@ export type EnglishCert =
 export interface Profile {
   grade: Grade; // required
   field: Field; // required
-  gradeBand?: GradeBand;
+  gpa?: Gpa;
   unt?: number; // 50-140 integer; undefined = not taken
   languages?: Partial<Record<Lang, LangLevel>>;
   englishCert?: EnglishCert;

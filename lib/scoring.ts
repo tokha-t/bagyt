@@ -6,6 +6,7 @@ import {
   Tier,
   BUDGET_CEILING,
   GRANT_TUITION_CEILING,
+  GPA_SCORE,
 } from "./types";
 import { reasonFor } from "./reasons";
 export const DIMENSIONS: DimensionKey[] = [
@@ -118,9 +119,7 @@ export function scoreProgram(
     academic:
       p.unt !== undefined
         ? 50 + (p.unt - (r.untCutoff ?? 90)) * 3.5
-        : { excellent: 75, good: 60, average: 45, undisclosed: 55 }[
-            p.gradeBand ?? "undisclosed"
-          ],
+        : GPA_SCORE[p.gpa ?? "unknown"],
     financial:
       budget === undefined
         ? 55
