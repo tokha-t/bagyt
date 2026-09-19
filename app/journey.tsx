@@ -41,6 +41,7 @@ import NextActionCard from "@/components/NextActionCard";
 import PhaseGroup from "@/components/PhaseGroup";
 import EmptyState from "@/components/EmptyState";
 import SourceBadge from "@/components/SourceBadge";
+import { MarkWall } from "@/components/Mark";
 const routes = [
   "/",
   "/profile",
@@ -474,9 +475,10 @@ export default function Journey({ today: initialToday }: { today: string }) {
   if (stage === 1)
     return (
       <main className="landing">
+        <MarkWall />
         <header className="brand">
           <span className="brand-mark">↗</span> vilion
-          <span className="brand-note">A direction of your own</span>
+          <span className="brand-note">See where you fit</span>
         </header>
         <section className="hero">
           <div className="hero-copy">

@@ -1,6 +1,7 @@
 import { Phase, Task } from "@/lib/types";
 import { urgencyOf, daysUntil } from "@/lib/roadmap";
 import TaskRow from "./TaskRow";
+import Mark from "./Mark";
 export default function PhaseGroup({
   phase,
   tasks,
@@ -17,7 +18,9 @@ export default function PhaseGroup({
   return (
     <section className="phase panel">
       <div className="split">
-        <h2>{phase}</h2>
+        <h2>
+          <Mark name={phase} /> {phase}
+        </h2>
         <span>
           {tasks.filter((t) => completedIds.has(t.id)).length} / {tasks.length}{" "}
           done
