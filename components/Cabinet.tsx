@@ -7,11 +7,16 @@ import SourceBadge from "./SourceBadge";
 import { COMPUTED, programs, money } from "@/lib/data";
 import { encodeProfile, summary } from "@/lib/profile";
 import { readSession, clearSession, SavedSession, describeVersion } from "@/lib/session";
-import { readCompleted } from "@/lib/storage";
+import { readCompleted, writeCompleted } from "@/lib/storage";
+import { rankPrograms, REFERENCE_DATE } from "@/lib/scoring";
+import { buildRoadmap } from "@/lib/roadmap";
+import NextActionCard from "./NextActionCard";
+import PhaseGroup from "./PhaseGroup";
 
 export default function Cabinet() {
   const [session, setSession] = useState<SavedSession | null>(null);
   const [completed, setCompleted] = useState<Set<string>>(new Set());
+  const [today, setToday] = useState(REFERENCE_DATE);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
@@ -20,6 +25,14 @@ export default function Cabinet() {
     const id = setTimeout(() => {
       setSession(readSession());
       setCompleted(readCompleted());
+      setToday(
+        new Intl.DateTimeFormat("en-CA", {
+          timeZone: "Asia/Almaty",
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+        }).format(new Date()),
+      );
       setLoaded(true);
     }, 0);
     return () => clearTimeout(id);
@@ -54,6 +67,26 @@ export default function Cabinet() {
 
   const latest = session.history.at(-1);
   const profile = latest?.profile;
+  const selected = profile
+    ? (() => {
+        const ranked = rankPrograms(profile, programs, { today });
+        const saved = session.shortlist
+          .map((s) => ranked.find((m) => m.program.id === s.programId))
+          .filter((m): m is (typeof ranked)[number] => Boolean(m));
+        return saved.length ? saved : ranked.slice(0, 2);
+      })()
+    : [];
+  const roadmap = profile
+    ? buildRoadmap(profile, selected, today, completed)
+    : null;
+
+  function toggle(id: string) {
+    const next = new Set(completed);
+    if (next.has(id)) next.delete(id);
+    else next.add(id);
+    setCompleted(next);
+    writeCompleted(next);
+  }
 
   return (
     <main className="content cabinet">
@@ -75,6 +108,34 @@ export default function Cabinet() {
           ) : null}
         </div>
       </header>
+
+      {roadmap ? (
+        <NextActionCard task={roadmap.nextAction} onComplete={toggle} />
+      ) : null}
+
+      {roadmap ? (
+        <section className="panel">
+          <h2>
+            <Mark name="documents" /> Saved plan
+          </h2>
+          <p className="hint">
+            The same roadmap, with the tasks you have already marked complete.
+            Toggling one here changes it everywhere.
+          </p>
+          <div className="phases">
+            {roadmap.phases.map((group) => (
+              <PhaseGroup
+                key={group.phase}
+                phase={group.phase}
+                tasks={group.tasks}
+                completedIds={completed}
+                onToggle={toggle}
+                today={today}
+              />
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <section className="panel">
         <h2>

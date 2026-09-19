@@ -624,7 +624,11 @@ export default function Journey({ today: initialToday }: { today: string }) {
                     onChange={(v) =>
                       update({ ...p, unt: v ?? undefined }, "unt")
                     }
-                    hint="Move the slider to explore academic fit."
+                    hint={
+                      p.unt === undefined
+                        ? "No score yet — the ranking uses your school GPA instead."
+                        : `${programs.filter((r) => r.country === "KZ" && r.untCutoff <= (p.unt ?? 0)).length} dataset benchmarks reached (not eligibility).`
+                    }
                   />
                 </div>
                 <label>
