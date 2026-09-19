@@ -1354,3 +1354,63 @@ meter::-moz-meter-bar {
     bottom: 88px;
   }
 }
+
+/* saved plan — a browser key, never called an account */
+.save-plan .actions {
+  margin-top: 16px;
+}
+.cabinet {
+  display: grid;
+  gap: 24px;
+}
+.cabinet-header {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.cabinet-header > div {
+  position: relative;
+  z-index: 1;
+}
+.cabinet-header h1 {
+  margin: 4px 0 8px;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+}
+.cabinet h2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+}
+.cabinet h2 .mark {
+  color: var(--color-primary);
+}
+.cabinet-list,
+.cabinet-history {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+.cabinet-history {
+  counter-reset: version;
+}
+.cabinet-list li,
+.cabinet-history li {
+  display: grid;
+  gap: 4px;
+  padding: 12px 0;
+  border-top: 1px solid var(--color-border);
+  font-size: 14px;
+  color: var(--color-ink-muted);
+}
+.cabinet-list strong,
+.cabinet-history strong {
+  color: var(--color-ink);
+}
+.cabinet-history time {
+  font-variant-numeric: tabular-nums;
+  font-size: 12px;
+}

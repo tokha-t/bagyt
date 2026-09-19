@@ -44,6 +44,12 @@ import SourceBadge from "@/components/SourceBadge";
 import Landing from "@/components/Landing";
 import Companion from "@/components/Companion";
 import { CompanionStage } from "@/lib/companion";
+import {
+  readSession,
+  startSession,
+  recordVersion,
+  SavedSession,
+} from "@/lib/session";
 const routes = [
   "/",
   "/profile",
@@ -329,6 +335,8 @@ export default function Journey({ today: initialToday }: { today: string }) {
     | 6;
   const step = Math.max(1, Math.min(3, Number(search.get("step")) || 1));
   const [error, setError] = useState("");
+  const [session, setSession] = useState<SavedSession | null>(null);
+  const [saveNote, setSaveNote] = useState("");
   const [editStep, setEditStep] = useState(1);
   const [completed, setCompleted] = useState<Set<string>>(new Set());
   const [mutation, setMutation] = useState<{
@@ -370,7 +378,10 @@ export default function Journey({ today: initialToday }: { today: string }) {
     ...(!search.has("f") ? ["field"] : []),
   ];
   useEffect(() => {
-    const id = setTimeout(() => setCompleted(readCompleted()), 0);
+    const id = setTimeout(() => {
+      setCompleted(readCompleted());
+      setSession(readSession());
+    }, 0);
     return () => clearTimeout(id);
   }, []);
   useEffect(() => {
@@ -417,6 +428,19 @@ export default function Journey({ today: initialToday }: { today: string }) {
     window.scrollTo({ top: 0 });
   }
   function update(next: Profile, key: keyof Profile) {
+    if (session)
+      setSession(
+        recordVersion(
+          session,
+          next,
+          rankPrograms(next, programs, { today }).map((m) => m.program.id),
+          {
+            field: key,
+            from: describe(p[key]),
+            to: describe(next[key]),
+          },
+        ),
+      );
     setMutation({
       before: results,
       text: `${LABELS[key] ?? key} changed: ${describe(p[key])} → ${describe(next[key])}. ${key === "budget" ? "Cost fit and active weights were recalculated." : key === "grade" ? "Grade is reflected in your diagnostic; the numeric ranking uses your scores and preferences." : "Your fit scores were recalculated."}`,
@@ -845,6 +869,48 @@ export default function Journey({ today: initialToday }: { today: string }) {
                 />
               ))}
             </div>
+            <section className="panel save-plan">
+              <h2>Save your plan</h2>
+              <p>
+                Your progress lives in this browser only. Keep a copy so you can
+                come back to it, see how your options moved as your answers
+                changed, and pick the plan up later on this device.
+              </p>
+              <div className="actions">
+                <button
+                  className="primary"
+                  onClick={() => {
+                    setSession(
+                      startSession(
+                        p,
+                        results.map((m) => m.program.id),
+                        selected.map((m) => ({
+                          programId: m.program.id,
+                          matchAtSave: m.match,
+                          savedAt: new Date().toISOString(),
+                        })),
+                        [...completed],
+                      ),
+                    );
+                    setSaveNote("Saved in this browser.");
+                  }}
+                >
+                  Save in this browser
+                </button>
+                <button className="text-button" onClick={() => go("/matches")}>
+                  Not now — keep using without saving
+                </button>
+              </div>
+              <p className="hint" aria-live="polite">
+                {saveNote ||
+                  "No account, no sign-in, nothing leaves this device. Everything on Vilion works without saving."}
+              </p>
+              {session ? (
+                <a className="text-button" href="/cabinet">
+                  Open your saved plan →
+                </a>
+              ) : null}
+            </section>
             <div className="actions">
               <button onClick={() => go("/matches")}>Change program</button>
               <button className="text-button" onClick={() => go("/compare")}>
