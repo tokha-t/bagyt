@@ -12,7 +12,7 @@ Students in grades 9–11 in Kazakhstan must compare academic requirements, tuit
 
 ## 2. Solution and target user
 
-Nine questions in three back-navigable steps produce explained university fit scores, a comparison of two or three programs, a dated roadmap and one next action. Only grade and field are required. This is a planning prototype; users should verify official requirements before acting.
+Nine questions in three back-navigable steps produce explained university fit scores, a comparison of two or three programmes, a dated roadmap and one next action pinned to the top of it. Only grade and field are required. This is a planning prototype; users should verify official requirements before acting.
 
 [Demo persona Aisha: grade 11, UNT 118, IT, ₸3–6m, Kazakhstan and abroad](https://bagyt-pink.vercel.app/profile?g=11&f=it&gb=g&unt=118&l=kk:f,ru:f,en:w&ec=planned&b=3-6m&r=kazakhstan,europe&y=2027).
 
@@ -39,16 +39,41 @@ No database, authentication, analytics, component framework or animation package
 | 3 | `/diagnostic` | Deterministic profile summary |
 | 4 | `/matches` | Ranking, edits, deltas, relaxation and selection |
 | 5 | `/compare` | Responsive comparison |
-| 6 | `/roadmap` | Four phases, dated tasks and progress |
-| 7 | `/next-action` | Earliest incomplete task |
+| 6 | `/roadmap` | Four phases, dated tasks, progress, and the pinned next action |
+| — | `/cabinet` | The plan saved in this browser: shortlist, history, progress |
 
-`app/journey.tsx` owns UI orchestration. `components/` contains the 14 specified presentational components. Profile and selection changes use the native History API integrated with Next navigation; after the initial load, the journey does not require further page fetches. Every route also supports a direct entry and reload. Browser back/forward restores query state.
+`app/journey.tsx` owns UI orchestration. `components/` contains 18 presentational components: the 14 in the original contract plus `Mark`, `Landing`, `Companion` and `Cabinet`. Profile and selection changes use the native History API integrated with Next navigation; after the initial load, the journey does not require further page fetches. Every route also supports a direct entry and reload. Browser back/forward restores query state.
 
 `lib/types.ts` is the domain contract. `lib/profile.ts` validates and serializes URL state. `lib/scoring.ts` computes six clamped integer dimensions and deterministic ID-tiebroken scores. `lib/reasons.ts` provides score-band-aware numerical explanations. `lib/roadmap.ts` back-dates applicable task templates; shared tasks are deduplicated. `lib/storage.ts` guards all completion storage. `lib/data.ts` validates provenance. JSON data is statically imported.
 
-The only server API is `POST /api/summary`. It validates input and returns a cached complete template. The UI has the same local template and makes no request on the critical path.
+There are two server routes. `POST /api/summary` It validates input and returns a cached complete template. The UI has the same local template and makes no request on the critical path. `POST /api/companion`
+answers Vil's questions: with no `GEMINI_API_KEY` it returns a written answer, and when a key is present
+it calls Gemini with a 5-second abort, grounds the model in the figures already on the page and rejects
+any reply containing a digit sequence absent from that payload. Neither route can return a non-2xx for a
+recoverable condition, and neither is on the critical path.
 
 Weights adapt in declared order. Fixed values are preserved while the remaining weights are redistributed proportionally. The reference date is injected into scoring; the client supplies today in Asia/Almaty. No I/O, current-clock calls or randomness exist inside the scoring engine. On fewer than three direct matches, constraints relax in ascending weight order and widened results are explicitly labelled.
+
+### 4.1 Design system
+
+**Palette.** A warm clay canvas rather than white, deep teal as the only accent, and terracotta reserved
+as the single signal colour for the next action and for urgent tasks — nothing else is allowed to use it.
+Every colour is a token in `app/globals.css` and no hex is hardcoded anywhere else, which is why a palette
+change is one file. Measured contrast on the canvas: ink 16.34:1, ink-muted 5.77:1, primary 8.30:1, clay
+5.68:1, and the three tier colours 5.97, 5.28 and 4.84. `ink-faint` measures 3.04 and is therefore
+declared decorative-only and used at no body size.
+
+**The marks.** Ten hand-drawn inline SVG marks on one 24×24 grid at one 1.5 stroke weight: six dimension
+marks (ascending bar triad, cut circle, overlapping arcs, four-petal cross, bearing diamond, quarter ring)
+and four phase marks (filled square, folded corner, outward arrow, five-point asterisk). Each means
+exactly one thing wherever it appears, they inherit `currentColor` so they tint with their tier, and the
+six dimension marks tile behind the landing hero and the cabinet header at 4% opacity. The set is closed
+at ten; Vil, the companion, is the single deliberate eleventh form.
+
+**Six stages, not seven.** The next action is pinned inside `/roadmap` rather than living on its own
+route, so it stays visible alongside the plan it derives from. The requirement — one clearly marked
+nearest step with a completion toggle that promotes its successor — is unchanged; only its location is.
+`/next-action` redirects to `/roadmap` with the query string intact, so links shared earlier still work.
 
 ## 5. Local setup
 
@@ -124,7 +149,11 @@ Dataset: 36 program rows, 24 in Kazakhstan, 11 distinct fields, 24 demo grant-av
 
 ## 9. AI and APIs used
 
-Codex and Claude Code assisted with code, design, source discovery, checks and this README. The live application currently uses a deterministic diagnostic template. Optional model generation (F18/S-1) is deferred; no student profile is sent to an AI provider. The summary route always returns `source: template` and a process-cached result for valid input, with 400 for malformed input. An unset `SUMMARY_API_KEY` is the normal supported configuration.
+Codex and Claude Code assisted with code, design, source discovery, checks and this README. The live
+application uses deterministic templates for both the diagnostic and Vil, the in-product companion. Vil is
+rule-based as deployed: no API key is set, so every answer comes from a written set. The Gemini path
+exists, is grounded only in the figures already on screen and is gated by a mechanical guard that rejects
+any number it did not receive, but it is off unless a key is configured. Optional model generation (F18/S-1) is deferred; no student profile is sent to an AI provider. The summary route always returns `source: template` and a process-cached result for valid input, with 400 for malformed input. An unset `SUMMARY_API_KEY` is the normal supported configuration.
 
 ## 10. Pre-built components and tooling
 
@@ -140,6 +169,12 @@ Next.js `create-next-app` scaffold, Next routing/runtime, React, Tailwind CSS/Po
 - The city is not collected, so “my city” produces a neutral, explained location score.
 - A profile edit recomputes immediately, but an unchanged relevant input or rounding may preserve scores/order. Grade alone does not enter the stipulated six formulas; the cause line explicitly says so.
 - All future task dates are expected assumptions, not announced 2027–2029 deadlines. Leap years may shift a fixed-day offset by one calendar day. Changing intake creates a separate completion namespace.
-- Optional model-generated prose is not enabled. COULD features remain deferred according to the scope gate.
+- Optional model-generated prose is not enabled. Vil answers from a written set, and the Gemini path stays
+  off until a key is configured and its key-removed path is re-tested.
+- The saved plan is a browser key, not an account. It does not sync across devices; cross-device storage
+  is the next step and is deliberately not claimed anywhere in the interface.
+- The deployment URL and repository keep an earlier project name. Adding a `vilion` alias is a
+  five-minute change and was not made, because a live URL that already resolves is worth more than a tidy
+  one on freeze day.
 - The separate plan document was not provided. Slides, submission links and event moderation instructions cannot be reconstructed from this technical document.
 - Physical-device, unrehearsed timing and scheduled freeze checks are pending until recorded in QA.md. This repository is not labelled fully submission-ready while those gates are open.

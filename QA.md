@@ -108,6 +108,31 @@ Source research per the Data Research Brief, then the dataset change re-verified
 
 Ranking impact to note before recording the video: KazNMU Medicine fell from an invented 1,900,000 ₸ to a sourced 1,230,700 ₸ and KIMEP rose from 5,500,000 ₸ to 5,876,280 ₸, so the financial dimension and the order of the shortlist move for budget-constrained profiles. Record narration against the current numbers, not the earlier ones.
 
+## Fourth run — 19 September 2026, v3 redesign full pass
+
+Every §10 check from the v3 spec, run against the local production build at 390 px unless noted.
+
+| # | Check | Result |
+| --- | --- | --- |
+| 1 | B-1..B-8 return ≥ 3 cards | 5, 5, 5, 5, 3, 5, 5, 5 — six dimensions on every card |
+| 2 | B-2, grant-seeking | 5 cards, no console output |
+| 3 | B-6, europe + under-1M | 5 cards through F17 relaxation, never an empty set |
+| 4 | No legacy palette anywhere | 0 elements using any pre-v3 colour across all seven routes |
+| 5 | Clay only on the next action and urgent tasks | 4 clay elements in the product, all inside `.next-action` or an urgent task; 0 strays |
+| 6 | Progress rail shows 6 dots at 390 px | 6 dots, no overlap at 320, 390, 768, 1280 |
+| 7 | `/next-action` redirects | 307 to `/roadmap` with the query string preserved |
+| 8 | At least one task in the urgent state | "5 days left", from the seeded near-term task |
+| 9 | Every fact carries a provenance badge | 0 unbadged fact rows and 0 unbadged tasks across the boundary set |
+| 10 | Marks render at 24px and inherit tier colour | 24px everywhere they appear; tinted by tier on match cards |
+
+Also verified: build, lint and typecheck clean; landing CTA above the fold at 320, 390, 768 and 1280;
+seven landing sections with three badged stat tiles; the companion route returns 200 with a useful answer
+both with no key and with a malformed body; the fact guard admits a number from the payload and rejects an
+invented one; `/cabinet` renders a designed empty state with nothing saved, then the saved plan with its
+history after saving; legacy `gb=e` and junk `gb=zzz` links both render without throwing.
+
+Zero console errors or warnings in every run above.
+
 ## Intentional deviations / unresolved source requirements
 
 - F16 AC16.4: a universal state-grant ceiling of 1,000,000 ₸ is not verified. The located official source covers a specific charitable program. The app labels the formula’s cap as Demo.

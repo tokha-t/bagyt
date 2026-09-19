@@ -1,6 +1,6 @@
 # Vilion — conformance and progress state
 
-Audited against **Bagyt — Technical Specification v1** (2026-09-18, LOCUS Case 2, freeze 19 Sept 09:30
+Audited against **Technical Specification v1** (2026-09-18, LOCUS Case 2, freeze 19 Sept 09:30
 Astana). Audit run 18 September 2026 against local `main` `9b743bd` plus uncommitted working-tree changes.
 
 The specification document itself is not committed to this repository. Section and AC numbers below
@@ -204,3 +204,49 @@ still zero overflow and zero console output, build and lint clean.
 
 Items 8–10 need the owner, a second browser and a second device; they cannot be executed from here.
 Per §13.2 rule 4, anything discovered after the freeze is documented in README §11, not fixed.
+
+## 13. Spec v3 — redesign and expansion, 19 September 2026
+
+All eleven queue items in v3 §9 are built and committed, each with its own verification.
+
+| # | Item | State |
+| --- | --- | --- |
+| 1 | Palette tokens | Done — all twelve contrast pairs measured and matching the spec's figures |
+| 2 | Rename to Vilion | Done — code, docs, manifest; Vercel and GitHub names deliberately unchanged |
+| 3 | Deadline urgency, four states | Done — plus the seeded near-term task, so the urgent state is demonstrable |
+| 4 | Step 7 folded into step 6 | Done — six dots, sticky card, `/next-action` redirects with its query |
+| 5 | Six dimension marks | Done |
+| 6 | GPA question | Done — legacy `gb` letters still decode to the nearest point |
+| 7 | Landing expansion | Done — seven sections, CTA above the fold at every width |
+| 8 | Four phase marks | Done — the set is closed at ten |
+| 9 | AI companion, canned | Done — Vil, with written answers and no key required |
+| 10 | Cabinet, route A | Done — `/cabinet`, local, additive, honest about being a browser key |
+| 11 | Gemini wiring | Done — behind the guard, the 5s abort and the canned fallback; off without a key |
+
+### Deviations from v3, and why
+
+**The middle stat tile.** §4.3 asked for "19 250 vs 1 423" grants for engineering versus business,
+management and law. Neither figure is in the verified set and neither could be sourced in the research
+pass. The tile carries the ministry's 60% engineering share instead — tier-1 sourced, and it makes the
+same point. Rendering the pair unsourced would have contradicted the honesty section three screens below
+it, and NFR-26..NFR-31.
+
+**The `gb` parameter.** §5.1 says to map unknown values to `unknown`. Unrecognised values do fall back,
+but the pre-v3 letters `e`, `g` and `a` are mapped to 5.0, 4.0 and 3.0 rather than discarded, so links
+shared before the change keep their meaning as well as their validity.
+
+**The Vercel alias.** §8.2 preferred adding `vilion.vercel.app`. No alias was added, so the README states
+option B: the product is Vilion, the deployment keeps its earlier name. Nothing dangles and nothing can
+404.
+
+**Component count.** v1 §9.1 fixed 14 components. There are now 18: `Mark`, `Landing`, `Companion` and
+`Cabinet` are v3 additions. `TaskRow` takes `urgency` and `daysLeft` in place of `overdue`.
+
+**Not deployed.** Every item is committed; none is pushed or deployed. v3 §9 rule 1 asks for a deploy
+after each item, which needs the repository owner.
+
+### Still open from v1 §12.5
+
+G-5 (one uninterrupted 12-item walkthrough), G-7/R-6 (Slow 4G), G-8 (private window on an unused device),
+G-10/SC-5 (unbadged-fact sweep by hand), NFR-15 (Safari and Firefox), SC-1 (unrehearsed participant on a
+phone). Six stages now, so the walkthrough script shortens by one step.
