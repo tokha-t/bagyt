@@ -5,14 +5,13 @@ const names = [
   "Matches",
   "Compare",
   "Roadmap",
-  "Next action",
 ];
 export default function ProgressRail({
   stage,
   completed,
   onJump,
 }: {
-  stage: 1 | 2 | 3 | 4 | 5 | 6 | 7;
+  stage: 1 | 2 | 3 | 4 | 5 | 6;
   completed: number[];
   onJump?: (s: number) => void;
 }) {

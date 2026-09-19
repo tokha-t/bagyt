@@ -48,7 +48,6 @@ const routes = [
   "/matches",
   "/compare",
   "/roadmap",
-  "/next-action",
 ];
 const titles = [
   "",
@@ -57,7 +56,6 @@ const titles = [
   "Find your direction.",
   "Make room for comparison.",
   "A plan you can follow.",
-  "One step starts it.",
 ];
 const sub = [
   "",
@@ -65,8 +63,7 @@ const sub = [
   "Your answers, reflected back.",
   "Explore the fit. Understand the trade-offs.",
   "Your highest-weighted priorities come first.",
-  "Work backwards from your intended intake.",
-  "Focus on the earliest unfinished task.",
+  "Work backwards from your intended intake. Your next step stays pinned above it.",
 ];
 const opts = (a: string[]) =>
   a.map((value) => ({ value, label: LABELS[value] ?? value }));
@@ -325,8 +322,8 @@ export default function Journey({ today: initialToday }: { today: string }) {
     | 3
     | 4
     | 5
-    | 6
-    | 7;
+    | 6;
+;
   const step = Math.max(1, Math.min(3, Number(search.get("step")) || 1));
   const [error, setError] = useState("");
   const [editStep, setEditStep] = useState(1);
@@ -834,6 +831,14 @@ export default function Journey({ today: initialToday }: { today: string }) {
         )}
         {stage === 6 && (
           <>
+            <div className="pinned-action">
+              <NextActionCard task={roadmap.nextAction} onComplete={toggle} />
+              <p className="completion-note" aria-live="polite">
+                {roadmap.phases.reduce((a, g) => a + g.completedCount, 0)} of{" "}
+                {roadmap.phases.reduce((a, g) => a + g.tasks.length, 0)}{" "}
+                planning tasks complete.
+              </p>
+            </div>
             <div className="panel plan-context">
               <p>
                 Planning for {p.startYear ?? 2027} ·{" "}
@@ -861,7 +866,6 @@ export default function Journey({ today: initialToday }: { today: string }) {
                 each university.
               </p>
             </div>
-            <NextActionCard task={roadmap.nextAction} onComplete={toggle} />
             <div className="phases">
               {roadmap.phases.map((group) => (
                 <PhaseGroup
@@ -876,26 +880,8 @@ export default function Journey({ today: initialToday }: { today: string }) {
             </div>
             <div className="actions">
               <button onClick={() => go("/matches")}>Change program</button>
-              <button className="primary" onClick={() => go("/next-action")}>
-                Focus on next action →
-              </button>
-            </div>
-          </>
-        )}
-        {stage === 7 && (
-          <>
-            <NextActionCard task={roadmap.nextAction} onComplete={toggle} />
-            <p className="completion-note" aria-live="polite">
-              {roadmap.phases.reduce((a, g) => a + g.completedCount, 0)} of{" "}
-              {roadmap.phases.reduce((a, g) => a + g.tasks.length, 0)} planning
-              tasks complete.
-            </p>
-            <div className="actions">
-              <button onClick={() => go("/roadmap")}>
-                See the full roadmap
-              </button>
-              <button className="text-button" onClick={() => go("/matches")}>
-                Revisit my options
+              <button className="text-button" onClick={() => go("/compare")}>
+                Back to comparison
               </button>
             </div>
           </>

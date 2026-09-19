@@ -1002,3 +1002,29 @@ meter::-moz-meter-bar {
   border-left: 3px solid var(--color-clay);
   padding-left: 13px;
 }
+
+/* the next action is pinned within the roadmap, not a separate stage */
+.pinned-action {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  padding-top: 8px;
+  background: linear-gradient(
+    var(--color-paper) 85%,
+    color-mix(in srgb, var(--color-paper) 0%, transparent)
+  );
+}
+.pinned-action .next-action {
+  margin: 0 0 8px;
+}
+.pinned-action .completion-note {
+  margin: 0 0 16px;
+}
+@media (max-width: 720px) {
+  .pinned-action .next-action {
+    padding: 20px;
+  }
+  .pinned-action .next-action h2 {
+    font-size: 24px;
+  }
+}
