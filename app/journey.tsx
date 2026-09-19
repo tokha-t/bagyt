@@ -42,6 +42,8 @@ import PhaseGroup from "@/components/PhaseGroup";
 import EmptyState from "@/components/EmptyState";
 import SourceBadge from "@/components/SourceBadge";
 import Landing from "@/components/Landing";
+import Companion from "@/components/Companion";
+import { CompanionStage } from "@/lib/companion";
 const routes = [
   "/",
   "/profile",
@@ -468,6 +470,16 @@ export default function Journey({ today: initialToday }: { today: string }) {
       go("/profile", q);
     } else go("/diagnostic");
   }
+  const visibleFacts = [
+    `Profile: grade ${p.grade}, field ${p.field}${p.unt !== undefined ? `, UNT ${p.unt}` : ", no UNT supplied"}${p.gpa ? `, GPA ${p.gpa}` : ""}${p.budget ? `, budget ${p.budget}` : ""}.`,
+    ...results.map(
+      (r) =>
+        `${r.program.name} at ${r.program.university}: match ${r.match}/100, tier ${r.tier}, tuition ${r.program.tuitionPerYear} KZT per year, UNT reference ${r.program.untCutoff}${r.program.grantCutoff !== null ? `, 2025 grant cut-off ${r.program.grantCutoff}` : ""}.`,
+    ),
+    ...roadmap.phases.flatMap((g) =>
+      g.tasks.slice(0, 3).map((t) => `Task ${t.title} planned for ${t.date}.`),
+    ),
+  ].join("\n");
   const dropped =
     mutation?.before.filter(
       (a) => !results.some((b) => a.program.id === b.program.id),
@@ -842,6 +854,14 @@ export default function Journey({ today: initialToday }: { today: string }) {
           </>
         )}
       </main>
+      <Companion
+        stage={
+          (["profile", "diagnostic", "matches", "compare", "roadmap"][
+            stage - 2
+          ] ?? "matches") as CompanionStage
+        }
+        visibleFacts={visibleFacts}
+      />
       <footer className="app-footer">
         Vilion · See where you fit.
         <span>Check official requirements before acting.</span>

@@ -1265,3 +1265,92 @@ meter::-moz-meter-bar {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* Vil — the eleventh form, and the only one outside the mark set */
+.companion {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+.companion-mark {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 12px;
+  background: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: transform 0.2s ease;
+  animation: vil-blink 6s infinite;
+}
+.companion-mark:hover {
+  transform: rotate(-8deg);
+}
+.companion-mark .eye {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-surface);
+}
+@keyframes vil-blink {
+  0%,
+  92%,
+  100% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0.45;
+  }
+}
+.companion-panel {
+  width: min(320px, calc(100vw - 32px));
+  max-height: min(60vh, 460px);
+  overflow-y: auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 16px;
+  box-shadow: 0 12px 32px rgb(28 25 23 / 0.12);
+}
+.companion-q {
+  font-weight: 600;
+  margin: 12px 0 4px;
+}
+.companion-a {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: var(--color-ink-muted);
+}
+.companion-questions {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.companion-questions button {
+  width: 100%;
+  text-align: left;
+  font-size: 13px;
+  padding: 10px 12px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .companion-mark {
+    animation: none;
+    transition: none;
+  }
+}
+/* never sit on top of the sticky action bar on a phone */
+@media (max-width: 720px) {
+  .companion {
+    bottom: 88px;
+  }
+}
