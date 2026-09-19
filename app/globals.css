@@ -1,19 +1,30 @@
 @import "tailwindcss";
 @theme {
-  --color-paper: #faf8f4;
+  /* canvas — warm clay */
+  --color-paper: #fdf6f0;
   --color-surface: #ffffff;
-  --color-border: #e6e1d8;
-  --color-ink: #15181d;
-  --color-ink-muted: #5b6470;
-  --color-ink-faint: #626c79;
-  --color-primary: #0e7490;
-  --color-primary-sub: #e0f2f7;
-  --color-gold: #d97706;
-  --color-gold-sub: #fef3e2;
-  --color-strong: #0f766e;
-  --color-realistic: #0e7490;
-  --color-stretch: #b45309;
-  --color-notyet: #64748b;
+  --color-surface-alt: #f7ede4;
+  --color-border: #e8d9cc;
+
+  /* ink */
+  --color-ink: #1c1917;
+  --color-ink-muted: #6b5f57;
+  --color-ink-faint: #9a8c82; /* decorative only — fails AA at body size */
+
+  /* accent — deep teal, the only accent */
+  --color-primary: #0f5257;
+  --color-primary-sub: #dceeee;
+
+  /* signal — terracotta, next action and urgency ONLY */
+  --color-clay: #a8412b;
+  --color-clay-sub: #fbe8e2;
+
+  /* fit tiers — darkened to pass AA at body size */
+  --color-strong: #2d6a4f;
+  --color-realistic: #0f5257;
+  --color-stretch: #9a5618;
+  --color-notyet: #766b63;
+
   --radius-card: 14px;
   --radius-input: 10px;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
@@ -660,8 +671,8 @@ meter::-moz-meter-bar {
   display: none;
 }
 .next-action {
-  background: var(--color-gold-sub);
-  border: 1px solid var(--color-gold);
+  background: var(--color-clay-sub);
+  border: 1px solid var(--color-clay);
   border-radius: var(--radius-card);
   padding: 32px;
   margin: 24px 0;
@@ -675,8 +686,8 @@ meter::-moz-meter-bar {
   justify-content: space-between;
   gap: 32px;
   margin-top: 24px;
-  border-color: var(--color-gold);
-  background: var(--color-gold);
+  border-color: var(--color-clay);
+  background: var(--color-clay);
   color: var(--color-ink);
   font-weight: 600;
 }
