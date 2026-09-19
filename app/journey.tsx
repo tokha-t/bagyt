@@ -478,7 +478,7 @@ export default function Journey({ today: initialToday }: { today: string }) {
     return (
       <main className="landing">
         <header className="brand">
-          <span className="brand-mark">↗</span> bagyt
+          <span className="brand-mark">↗</span> vilion
           <span className="brand-note">A direction of your own</span>
         </header>
         <section className="hero">
@@ -528,7 +528,7 @@ export default function Journey({ today: initialToday }: { today: string }) {
     <div className="app-shell">
       <header className="app-header">
         <button className="brand" onClick={() => go("/")}>
-          <span className="brand-mark">↗</span> bagyt
+          <span className="brand-mark">↗</span> vilion
         </button>
         <span className="brand-note">Your future, made manageable.</span>
       </header>
@@ -902,7 +902,7 @@ export default function Journey({ today: initialToday }: { today: string }) {
         )}
       </main>
       <footer className="app-footer">
-        Bagyt · A direction of your own.
+        Vilion · See where you fit.
         <span>Check official requirements before acting.</span>
       </footer>
     </div>

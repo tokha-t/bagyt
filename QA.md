@@ -1,4 +1,4 @@
-# Verification record
+# Vilion — verification record
 
 Executed on 18 September 2026. This is an evidence ledger, not a claim that every freeze gate has passed.
 

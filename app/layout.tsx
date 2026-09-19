@@ -7,9 +7,9 @@ const inter = Inter({
   display: "swap",
 });
 export const metadata: Metadata = {
-  title: "Bagyt — A direction of your own",
+  title: "Vilion — see where you fit",
   description:
-    "Explore university programs and create a preparation plan for your next chapter.",
+    "See where you fit: explore university programmes and build a dated preparation plan, for grades 9-11 in Kazakhstan.",
 };
 export default function RootLayout({
   children,

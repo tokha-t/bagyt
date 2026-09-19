@@ -1,6 +1,10 @@
-# Bagyt — a direction of your own
+# Vilion — see where you fit
 
-[Open Bagyt](https://bagyt-pink.vercel.app) · [Public repository](https://github.com/tokha-t/bagyt)
+[Open Vilion](https://bagyt-pink.vercel.app) · [Public repository](https://github.com/tokha-t/bagyt)
+
+> The deployment URL and the repository retain an earlier project name; the product is Vilion. The
+> project and repository were deliberately not renamed — renaming a Vercel project changes its generated
+> domain, and a submitted link that stops resolving during judging costs more than a tidy URL is worth.
 
 ## 1. Problem statement
 
@@ -98,7 +102,7 @@ Resilience: run without any API key, make the summary route unavailable, disable
 
 ## 7. Team roles
 
-Solo project. Product direction and registration: repository owner. Implementation, source research, documentation and desktop verification: Codex AI coding assistance. The registered team name was not supplied; no team identity was invented.
+Solo project. Product direction and registration: repository owner. Implementation, source research, documentation and desktop verification: Codex and Claude Code AI coding assistance. The registered team name was not supplied; no team identity was invented.
 
 ## 8. Data sources
 
@@ -120,11 +124,11 @@ Dataset: 36 program rows, 24 in Kazakhstan, 11 distinct fields, 24 demo grant-av
 
 ## 9. AI and APIs used
 
-Codex assisted with code, design, source discovery, checks and this README. The live application currently uses a deterministic diagnostic template. Optional model generation (F18/S-1) is deferred; no student profile is sent to an AI provider. The summary route always returns `source: template` and a process-cached result for valid input, with 400 for malformed input. An unset `SUMMARY_API_KEY` is the normal supported configuration.
+Codex and Claude Code assisted with code, design, source discovery, checks and this README. The live application currently uses a deterministic diagnostic template. Optional model generation (F18/S-1) is deferred; no student profile is sent to an AI provider. The summary route always returns `source: template` and a process-cached result for valid input, with 400 for malformed input. An unset `SUMMARY_API_KEY` is the normal supported configuration.
 
 ## 10. Pre-built components and tooling
 
-Next.js `create-next-app` scaffold, Next routing/runtime, React, Tailwind CSS/PostCSS, TypeScript, ESLint, and Inter via `next/font/google` (Latin and Cyrillic subsets, self-hosted build output). All 14 application components and the visual layout were authored for Bagyt. No MUI, Chakra, shadcn, icon, chart, form, state, date or animation library was used. Browser inspection used Codex browser tooling. No stock illustration was used; the desktop direction graphic is CSS.
+Next.js `create-next-app` scaffold, Next routing/runtime, React, Tailwind CSS/PostCSS, TypeScript, ESLint, and Inter via `next/font/google` (Latin and Cyrillic subsets, self-hosted build output). All 14 application components and the visual layout were authored for Vilion. No MUI, Chakra, shadcn, icon, chart, form, state, date or animation library was used. Browser inspection used Codex browser tooling. No stock illustration was used; the desktop direction graphic is CSS and every signature mark is hand-authored inline SVG.
 
 ## 11. Known limitations and specification clarifications
 

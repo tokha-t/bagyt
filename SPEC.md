@@ -1,4 +1,4 @@
-# Bagyt — conformance and progress state
+# Vilion — conformance and progress state
 
 Audited against **Bagyt — Technical Specification v1** (2026-09-18, LOCUS Case 2, freeze 19 Sept 09:30
 Astana). Audit run 18 September 2026 against local `main` `9b743bd` plus uncommitted working-tree changes.
