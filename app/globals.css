@@ -971,3 +971,34 @@ meter::-moz-meter-bar {
   display: inline;
   font-size: 20px;
 }
+
+/* task urgency — colour is never the only signal; each state carries text */
+.urgency {
+  margin-left: 8px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.urgency-overdue {
+  background: var(--color-clay);
+  color: var(--color-surface);
+  padding: 1px 8px;
+  border-radius: 999px;
+}
+.urgency-urgent {
+  color: var(--color-clay);
+  border: 1px solid var(--color-clay);
+  padding: 0 7px;
+  border-radius: 999px;
+}
+.urgency-done {
+  color: var(--color-strong);
+}
+.task[data-urgency="done"] strong {
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+.task[data-urgency="overdue"],
+.task[data-urgency="urgent"] {
+  border-left: 3px solid var(--color-clay);
+  padding-left: 13px;
+}

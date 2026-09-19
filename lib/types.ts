@@ -158,10 +158,13 @@ export interface TaskTemplate {
     | "untWindowStart"
     | "documentsOpen"
     | "applicationDeadline"
-    | "intakeStart";
+    | "intakeStart"
+    | "today";
   offsetDays: number; // negative = before anchor
   appliesIf: (p: Profile, m: MatchResult) => boolean;
 }
+
+export type TaskUrgency = "overdue" | "urgent" | "upcoming" | "done";
 
 export interface Roadmap {
   phases: { phase: Phase; tasks: Task[]; completedCount: number }[];

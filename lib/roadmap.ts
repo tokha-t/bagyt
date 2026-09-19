@@ -1,4 +1,12 @@
-import { Profile, MatchResult, Roadmap, TaskTemplate, Phase } from "./types";
+import {
+  Profile,
+  MatchResult,
+  Roadmap,
+  Task,
+  TaskTemplate,
+  TaskUrgency,
+  Phase,
+} from "./types";
 const always = () => true;
 export const TASK_TEMPLATES: TaskTemplate[] = [
   {
@@ -110,7 +118,33 @@ export const TASK_TEMPLATES: TaskTemplate[] = [
     offsetDays: -21,
     appliesIf: (p) => p.budget === "grant-only",
   },
+  {
+    id: "shortlist-review",
+    phase: "applications",
+    title: "Review this shortlist with a teacher or parent",
+    why: "A second opinion now is cheaper than a changed plan later.",
+    anchor: "today",
+    offsetDays: 5,
+    appliesIf: always,
+  },
 ];
+
+export function urgencyOf(
+  task: Task,
+  completed: boolean,
+  today: string,
+): TaskUrgency {
+  if (completed) return "done";
+  const days = Math.floor(
+    (Date.parse(task.date) - Date.parse(today)) / 86400000,
+  );
+  if (days < 0) return "overdue";
+  return days <= 7 ? "urgent" : "upcoming";
+}
+
+export function daysUntil(date: string, today: string): number {
+  return Math.floor((Date.parse(date) - Date.parse(today)) / 86400000);
+}
 export function buildRoadmap(
   p: Profile,
   selected: MatchResult[],
@@ -129,12 +163,13 @@ export function buildRoadmap(
         applicationDeadline: deadline
           ? `${year}${deadline.date.slice(4)}`
           : `${year}-07-20`,
+        today,
       };
       return TASK_TEMPLATES.filter((t) => t.appliesIf(p, m)).map((t) => {
         const d = new Date(`${anchors[t.anchor]}T12:00:00Z`);
         d.setUTCDate(d.getUTCDate() + t.offsetDays);
         return {
-          id: `${["unt-register", "unt-sit", "transcript", "id-passport", "portfolio-olympiad"].includes(t.id) ? "shared" : m.program.id}:${year}:${t.id}`,
+          id: `${["unt-register", "unt-sit", "transcript", "id-passport", "portfolio-olympiad", "shortlist-review"].includes(t.id) ? "shared" : m.program.id}:${year}:${t.id}`,
           phase: t.phase,
           title: [
             "university-application",
@@ -148,7 +183,10 @@ export function buildRoadmap(
           programId: m.program.id,
           provenance: {
             status: "expected" as const,
-            basis: `Planning task ${Math.abs(t.offsetDays)} days ${t.offsetDays <= 0 ? "before" : "after"} the assumed ${year} ${t.anchor}; confirm official dates.`,
+            basis:
+              t.anchor === "today"
+                ? `Planning task placed ${t.offsetDays} days from today; your own step, not an announced deadline.`
+                : `Planning task ${Math.abs(t.offsetDays)} days ${t.offsetDays <= 0 ? "before" : "after"} the assumed ${year} ${t.anchor}; confirm official dates.`,
           },
         };
       });
@@ -158,7 +196,6 @@ export function buildRoadmap(
     (task, index) =>
       candidates.findIndex((other) => other.id === task.id) === index,
   );
-  void today;
   return {
     phases: phases.map((phase) => ({
       phase,
